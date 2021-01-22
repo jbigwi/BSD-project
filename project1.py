@@ -128,7 +128,7 @@ amount_by_bank = pd.DataFrame({'Banks':amount_by_bank.index, 'DISBURSED_AMOUNT':
 
 fig = px.pie(amount_by_bank, values='DISBURSED_AMOUNT', names='Banks', title =( dataset_name+' '+"Disbursed amount"+' '+ "for non performed Loans"),
            color_discrete_sequence=px.colors.diverging.BrBG)
-st.plotly_chart(fig)
+st.plotly_chart(fig, use_container_width=True)
 
 st.markdown(" Bank's amount of Non performing loan")
 if st.sidebar.checkbox("Show raw data", False, key='0'):
@@ -153,7 +153,7 @@ if len(choice) > 0:
     choice_data = data[data.Banks.isin(choice)]
     fig_choice = px.histogram(choice_data, x='Banks', y='PERFORMANCE', histfunc='count', color='PERFORMANCE',
     facet_col = 'PERFORMANCE', labels={'PERFORMANCE':'performance'}, height=600, width=800)
-    st.plotly_chart(fig_choice)
+    st.plotly_chart(fig_choice, use_container_width=True)
 
 #Sum of money by banks
 #
@@ -222,7 +222,7 @@ x_count = get_data(bank)
 x_count = pd.DataFrame({'Inspection':x_count.index, 'performance':x_count.values})
 fig = px.pie(x_count, values='performance', names='Inspection',title =(bank+' '+ 'loans performance indicator'+' '+"for"+' '+dataset_name),
                  color_discrete_sequence=px.colors.diverging.BrBG)
-st.plotly_chart(fig)
+st.plotly_chart(fig, use_container_width=True)
 
 st.markdown(bank +' '+"loan amount for"+' '+dataset_name)
 if st.sidebar.checkbox("Show raw data", False, key='1'):
