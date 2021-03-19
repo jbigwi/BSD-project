@@ -130,7 +130,7 @@ fig = px.pie(amount_by_bank, values='DISBURSED_AMOUNT', names='Banks', title =( 
            color_discrete_sequence=px.colors.diverging.BrBG)
 st.plotly_chart(fig, use_container_width=True)
 
-st.markdown(" Bank's amount of Non performing loan")
+st.markdown(" Bank's amount of Non performing loan" + dataset_name)
 if st.sidebar.checkbox("Show raw data", False, key='0'):
         st.write(amount_by_bank)
 
