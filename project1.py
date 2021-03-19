@@ -9,8 +9,8 @@ import  plotly.express as px
 st.title("Validation of EDHW Contract loans Report")
 st.sidebar.title("Validation of EDHW Contract loans Report")
 
-st.markdown("This application is a Dashboard to analyze September reports on Contract loans ")
-st.sidebar.markdown("This application is a Dashboard to analyze September reports on Contract loans ")
+st.markdown("This application is a Dashboard to analyze monthly reports on Contract loans ")
+st.sidebar.markdown("This application is a Dashboard to analyze monthly reports on Contract loans ")
 
 dataset_name = st.sidebar.selectbox("Choose the Month", (" ","January", "October","November","September"))
 
