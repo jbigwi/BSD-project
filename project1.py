@@ -161,7 +161,7 @@ if len(choice) > 0:
 
 st.subheader("Contract Loan Amount by individual Bank")
 st.sidebar.subheader("Banks Contract Loan amount")
-bank = st.sidebar.radio("Select Bank", ( "Ecobank", "Access bank", "AB bank", "Cogebanque","Urwego bank",
+bank = st.sidebar.radio("Select Bank", ( "I&M bank","Ecobank", "Access bank", "AB bank", "Cogebanque","Urwego bank",
                                                "BRD","NCBA","BK","BPR", "KCB", "GT bank","Zigama Css","Bank of Africa","Unguka","Equity bank"))
 #creating new DataFrame for counting the computation
 def get_data(bank):
